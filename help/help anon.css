@@ -1,0 +1,27 @@
+*{
+    margin: 5px;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to left, rgba(114, 121, 122, 0.999), rgba(160, 158, 163, 0.999), rgba(114, 121, 122, 0.999)), url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Lake_O_Hara_from_Yukness_Ledge_Alpine_Route.jpg/800px-Lake_O_Hara_from_Yukness_Ledge_Alpine_Route.jpg");  
+    background-size: cover;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: left;
+}
