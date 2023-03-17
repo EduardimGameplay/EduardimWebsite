@@ -4,145 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login: eduardo</title>
+    <title>Login</title>
     <link rel="stylesheet" href="index.css">
+    <script defer src="index.css"></script>
 </head>
 
 <body>
-
-<div class="borda">
-        <header>
-
-<div class="direita">
-    <img src="./img/iconPerson2.jpg" alt="Pombo de Jaqueta" style="vertical-align: middle;">  
-    <h3>Eduardo</h3>
-</div>
-
-
-     </header>
-</div>   
-     <marquee direction="right" > Se ta funcinando não meche 👍</marquee>
-
-     <textarea id="" name="" rows="4" cols="27" placeholder="Notas:" class="nota"></textarea>
-
-
-    <div class="fundo">
-        <div class="calculadora">
-            <h1 class="thumbname">Calculadora</h1>
-            <p id="resultado"></p>
-            <table>
-                <tr>
-                    <td><button class="botao" onclick="clean()">C</button></td>
-                    <td><button class="botao" onclick="back()"><</button></td>
-                    <td><button class="botao" onclick="insert('/')">/</button></td>
-                    <td><button class="botao" onclick="insert('*')">X</button></td>
-                </tr>
-
-                <tr>
-                    <td><button class="botao" onclick="insert('7')">7</button></td>
-                    <td><button class="botao" onclick="insert('8')">8</button></td>
-                    <td><button class="botao" onclick="insert('9')">9</button></td>
-                    <td><button class="botao" onclick="insert('-')">-</button></td>
-                </tr>
-
-                <tr>
-                    <td><button class="botao" onclick="insert('4')">4</button></td>
-                    <td><button class="botao" onclick="insert('5')">5</button></td>
-                    <td><button class="botao" onclick="insert('6')">6</button></td>
-                    <td><button class="botao" onclick="insert('+')">+</button></td>
-                </tr>
-
-                <tr>
-                    <td><button class="botao" onclick="insert('1')">1</button></td>
-                    <td><button class="botao" onclick="insert('2')">2</button></td>
-                    <td><button class="botao" onclick="insert('3')">3</button></td>
-                    <td rowspan="2"><button class="botao" style="height: 106px;" onclick="calcular()">=</button></td>
-                </tr>
-
-                <tr>
-                    <td colspan="2"><button class="botao" style="width: 106px;" onclick="insert('0')">0</button></td>
-                    <td><button class="botao" onclick="insert('.')">.</button></td>
-                </tr>
-
-            </table>
-        </div>
-    </div>
-    <script>
-        function insert(num){
-            var numero = document.getElementById('resultado').innerHTML;
-            document.getElementById('resultado').innerHTML = numero + num;
-        }
-        function clean(){
-            document.getElementById('resultado').innerHTML = "";
-        }
-        function back(){
-            var resultado = document.getElementById('resultado').innerHTML;
-            document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1)
-        }
-        function calcular(){
-            var resultado = document.getElementById('resultado').innerHTML;
-            if(resultado){
-                document.getElementById('resultado').innerHTML = eval(resultado);
-            }
-        }
-    </script>
-
-<div class="relogio">
-    <div>
-        <span id="horas">00</span>
-        <span class="tempo">horas</span>
-    </div>
-
-    <div>
-        <span id="minutos">00</span>
-        <span class="tempo">minutos</span>
-    </div>
-
-    <div>
-        <span id="segundos">00</span>
-        <span class="tempo"> segundos</span>
-    </div>
-</div>
-
-<script>
-    const horas = document.getElementById('horas');
-    const minutos = document.getElementById('minutos');
-    const segundos = document.getElementById('segundos');
-
-    const relogio = setInterval(function time (){
-        let dateToday = new Date();
-        let hr = dateToday.getHours();
-        let min = dateToday.getMinutes();
-        let s = dateToday.getSeconds();
-
-        if (hr < 10) hr = '0' + hr;
-
-        if (min < 10) min = '0' + min;
-
-        if (s < 10) s = '0' + s;
-
-        horas.textContent = hr;
-        minutos.textContent = min;
-        segundos.textContent = s;
-    })
-</script>
-
-</body>
-
-<footer>
     
-    <a href="https://github.com/EduardimGameplay" target="_blank" rel="noopener noreferrer">
-        <img src="./img/github.png" alt="">
-        <p>GitHub</p>
-    </a>
-    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-        <img src="./img/youtube.png" alt="">
-        <p>YouTube</p>
-    </a>
-    <a href="https://twitter.com/home" target="_blank" rel="noopener noreferrer">
-        <img src="./img/twitter.png" alt="">
-        <p>Twitter</p>
-    </a>
-</footer>
+    <div class="login">
+        <h1>Login</h1>
+        <br>
+        <input type="email" placeholder="Username">
+        <br><br>
+
+        <input type="password"  id="senha" placeholder="Senha">
+        <br><br>
+
+        <button type="button" onclick="validarSenha()">Login</button>
+        <p id="mensagem"></p>
+
+        <br><br>
+
+        <a href="anonimo.html"><button  class="alternativ">LOGIN ANÔNIMO</button></a>
+
+
+
+    </div>
+    <script src="index.js"></script>
+
+
+<div class="navbar">
+    <nav>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<i class="fas fa-bars"></i>
+		</label>
+		<ul>
+        <img src="logo_marca/6_no background.png" class="marca" alt="Logo marca ">
+        <img src="logo_marca/3_no background.png" class="bunny" alt="Crazy bunny ">
+			<li><a class="active" href="login.html">Início</a></li>
+			<li><a href="./help/help anon.html">Sobre</a></li>
+			<li><a href="#">Serviços</a></li>
+			<li><a href="#">Contato</a></li>
+		</ul>
+	</nav>
+</div>
+    
+</body>
 
 </html>
