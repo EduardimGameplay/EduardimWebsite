@@ -3,13 +3,13 @@ function validarSenha() {
   var senha = document.getElementById("senha").value;
   var mensagem = document.getElementById("mensagem");
 
-  if (user === "eduardo" && senha === "84869") {
+  if (user === "eduardim" && senha === "84869") {
       mensagem.style.display = "none";
       window.location.href = "login.html";
-  } else if (user === "joao" && senha === "12345") {
+  } else if (user === "user1" && senha === "12345") {
       mensagem.style.display = "none";
       window.location.href = "login.html";
-  } else if (user === "maria" && senha === "54321") {
+  } else if (user === "user2" && senha === "54321") {
       mensagem.style.display = "none";
       window.location.href = "login.html";
   } else {
