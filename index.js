@@ -6,7 +6,7 @@ function validarSenha() {
   if (user === "eduardim" && senha === "84869") {
       mensagem.style.display = "none";
       window.location.href = "login.html";
-  } else if (user === "user1" && senha === "12345") {
+  } else if (user === "declaration-of-love" && senha === "for2088") {
       mensagem.style.display = "none";
       window.location.href = "login.html";
   } else if (user === "user2" && senha === "54321") {
